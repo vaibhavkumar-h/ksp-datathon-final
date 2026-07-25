@@ -1,0 +1,3 @@
+Complaint_ID,Timestamp,Reporter,Contact,District,Area,Crime_Type,Incident_Date,Incident_Time,Description,Urgency
+CR-6404E207,2026-07-24T14:40:27,Anonymous,,Bengaluru District,"bengaluru, house",Murder,2026-07-16,01:15:00,i got shot,HIGH
+CR-70588CB6,2026-07-24T23:55:59,Anonymous,,Mysuru City,local,Murder,2026-07-23,01:15:00,murder,HIGH
