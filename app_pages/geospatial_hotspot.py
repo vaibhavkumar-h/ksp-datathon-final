@@ -30,7 +30,7 @@ st.caption(
 def load_fir_data():
     # KGID column had a mixed-dtype warning on load — force it to string
     df = pd.read_csv(
-        "data/fir_karnataka.csv",
+        "data/fir_karnataka_small.csv",
         dtype={"KGID": str},
         low_memory=False
     )
