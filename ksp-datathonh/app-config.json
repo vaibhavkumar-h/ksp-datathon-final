@@ -1,0 +1,9 @@
+{
+    "command": "sh -c \"python3 -m pip install --no-cache-dir -r requirements.txt && python3 -m streamlit run login.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true\"",
+    "build_path": "./",
+    "stack": "python_3_11",
+    "env_variables": {},
+    "memory": 1024,
+    "port": 8080,
+    "scripts": {}
+}

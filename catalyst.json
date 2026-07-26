@@ -1,0 +1,12 @@
+{
+  "appsail": [
+    {
+      "source": ".",
+      "name": "ksp-datathonh"
+    },
+    {
+      "source": ".",
+      "name": "ksp-vasu"
+    }
+  ]
+}

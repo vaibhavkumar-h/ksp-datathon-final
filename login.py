@@ -202,23 +202,42 @@ def render_login_form() -> None:
 if not is_authenticated():
     render_login_form()
 else:
+    # pages = {
+    #     "Operations": [
+    #         st.Page("pages/app.py", title="Dashboard", icon="🏠"),
+    #         st.Page("pages/report_crime.py", title="Report Crime", icon="📢"),
+    #         st.Page("pages/alerts.py", title="Alerts", icon="🚨"),
+    #     ],
+    #     "Intelligence": [
+    #         st.Page("pages/crime_prediction.py", title="Crime Prediction", icon="🔮"),
+    #         st.Page("pages/crime_chatbot.py", title="Crime Chatbot", icon="💬"),
+    #         st.Page("pages/geospatial_hotspot.py", title="Geospatial Hotspot", icon="🗺️"),
+    #         st.Page("pages/heatmap.py", title="Heatmap", icon="🔥"),
+    #         st.Page("pages/Socioeconomic.py", title="Socioeconomic", icon="🏙️"),
+    #         st.Page("pages/comparison.py", title="District Comparison", icon="📊"),
+    #     ],
+    #     "Reports": [
+    #         st.Page("pages/pdf_report.py", title="PDF Report", icon="📄"),
+    #         st.Page("pages/leaderboard.py", title="Leaderboard", icon="🏆"),
+    #     ],
+    # }
     pages = {
         "Operations": [
-            st.Page("pages/app.py", title="Dashboard", icon="🏠"),
-            st.Page("pages/report_crime.py", title="Report Crime", icon="📢"),
-            st.Page("pages/alerts.py", title="Alerts", icon="🚨"),
+            st.Page("app_pages/app.py", title="Dashboard", icon="🏠"),
+            st.Page("app_pages/report_crime.py", title="Report Crime", icon="📢"),
+            st.Page("app_pages/alerts.py", title="Alerts", icon="🚨"),
         ],
         "Intelligence": [
-            st.Page("pages/crime_prediction.py", title="Crime Prediction", icon="🔮"),
-            st.Page("pages/crime_chatbot.py", title="Crime Chatbot", icon="💬"),
-            st.Page("pages/geospatial_hotspot.py", title="Geospatial Hotspot", icon="🗺️"),
-            st.Page("pages/heatmap.py", title="Heatmap", icon="🔥"),
-            st.Page("pages/Socioeconomic.py", title="Socioeconomic", icon="🏙️"),
-            st.Page("pages/comparison.py", title="District Comparison", icon="📊"),
+            st.Page("app_pages/crime_prediction.py", title="Crime Prediction", icon="🔮"),
+            st.Page("app_pages/crime_chatbot.py", title="Crime Chatbot", icon="💬"),
+            st.Page("app_pages/geospatial_hotspot.py", title="Geospatial Hotspot", icon="🗺️"),
+            st.Page("app_pages/heatmap.py", title="Heatmap", icon="🔥"),
+            st.Page("app_pages/Socioeconomic.py", title="Socioeconomic", icon="🏙️"),
+            st.Page("app_pages/comparison.py", title="District Comparison", icon="📊"),
         ],
         "Reports": [
-            st.Page("pages/pdf_report.py", title="PDF Report", icon="📄"),
-            st.Page("pages/leaderboard.py", title="Leaderboard", icon="🏆"),
+            st.Page("app_pages/pdf_report.py", title="PDF Report", icon="📄"),
+            st.Page("app_pages/leaderboard.py", title="Leaderboard", icon="🏆"),
         ],
     }
 

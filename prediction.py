@@ -1,13 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
 import numpy as np
-
-st.set_page_config(
-    page_title="Crime Prediction",
-    layout="wide"
-)
 
 st.title("🤖 AI Crime Prediction & Risk Scoring")
 
@@ -68,28 +62,17 @@ except:
 c24 = int((c23 + c25) / 2)
 
 # =====================
-# TRAIN MODEL
+# TRAIN MODEL (pure numpy, no sklearn needed)
 # =====================
 
-X = np.array(
-    [2022,2023,2024,2025]
-).reshape(-1,1)
+X = np.array([2022, 2023, 2024, 2025])
+y = np.array([c22, c23, c24, c25])
 
-y = np.array(
-    [c22,c23,c24,c25]
-)
+# Fit a straight line: y = slope*X + intercept
+slope, intercept = np.polyfit(X, y, 1)
 
-model = LinearRegression()
-
-model.fit(X,y)
-
-pred26 = int(
-    model.predict([[2026]])[0]
-)
-
-pred27 = int(
-    model.predict([[2027]])[0]
-)
+pred26 = int(slope * 2026 + intercept)
+pred27 = int(slope * 2027 + intercept)
 
 # =====================
 # KPI

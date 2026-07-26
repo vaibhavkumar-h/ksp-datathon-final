@@ -1,0 +1,36 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "56054000000013047",
+      "name": "ksp-Datathon",
+      "domain": {
+        "id": "50044342118",
+        "name": "ksp-datathon-60080028040.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60080028040",
+          "name": "Development",
+          "type": 3
+        },
+        {
+          "idx": 2,
+          "id": "50044350670",
+          "name": "Production",
+          "type": 1
+        }
+      ]
+    }
+  ]
+}
