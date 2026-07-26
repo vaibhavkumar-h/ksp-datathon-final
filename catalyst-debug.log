@@ -1,0 +1,102 @@
+[debug] [2026-07-26T16:36:36.950Z] : 
+[debug] [2026-07-26T16:36:36.951Z] : ----------------------------------------------------------------------
+[debug] [2026-07-26T16:36:36.952Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
+[debug] [2026-07-26T16:36:36.952Z] : CLI Version:  1.27.0
+[debug] [2026-07-26T16:36:36.952Z] : Platform:     win32
+[debug] [2026-07-26T16:36:36.952Z] : Node Version: v24.18.0
+[debug] [2026-07-26T16:36:36.952Z] : Time:         Sun Jul 26 2026 22:06:36 GMT+0530 (India Standard Time)
+[debug] [2026-07-26T16:36:36.952Z] : ----------------------------------------------------------------------
+[debug] [2026-07-26T16:36:36.952Z] : 
+[debug] [2026-07-26T16:36:39.203Z] : > authorizing via signed-in user option
+[debug] [2026-07-26T16:36:39.204Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
+[debug] [2026-07-26T16:36:39.404Z] : > refreshing access token <
+[debug] [2026-07-26T16:36:39.407Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.in/oauth/v2/token 
+<request body omitted>
+
+[debug] [2026-07-26T16:36:40.174Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sun, 26 Jul 2026 16:36:41 GMT","content-type":"application/json;charset=UTF-8","content-length":"2523","connection":"keep-alive","cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-07-26T16:36:40.414Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/56054000000013047 
+
+[debug] [2026-07-26T16:36:42.523Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sun, 26 Jul 2026 16:36:43 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-07-26T16:36:42.526Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/56054000000013047/environment 
+
+[debug] [2026-07-26T16:36:42.674Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sun, 26 Jul 2026 16:36:43 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-07-26T16:38:17.870Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.in/baas/v1/project/56054000000013047/appsail/upsert 
+
+[debug] [2026-07-26T16:38:18.275Z] : <<<< HTTP RESPONSE : 413
+Response Headers: {"server":"ZGS","date":"Sun, 26 Jul 2026 16:38:19 GMT","content-type":"text/html","content-length":"148","connection":"close","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-07-26T16:38:18.281Z] : Response Body : "<html>\r\n<head><title>413 Request Entity Too Large</title></head>\r\n<body>\r\n<center><h1>413 Request Entity Too Large</h1></center>\r\n</body>\r\n</html>\r\n"
+
+[debug] [2026-07-26T16:38:18.297Z] : CatalystError: HTTP Error: 413, Unknown Error
+    at exports.default (C:\Users\HP\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\errorResponse.js:25:12)
+    at API._parseResponse (C:\Users\HP\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\internal\api.js:174:60)
+    at API.<anonymous> (C:\Users\HP\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\internal\api.js:265:38)
+    at Generator.next (<anonymous>)
+    at C:\Users\HP\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\internal\api.js:41:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\HP\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\internal\api.js:37:12)
+    at Request.<anonymous> (C:\Users\HP\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\internal\api.js:263:53)
+    at Request.emit (node:events:521:24)
+    at Request.<anonymous> (C:\Users\HP\AppData\Roaming\npm\node_modules\zcatalyst-cli\node_modules\request\request.js:1154:10) {
+  status: 413,
+  exit: 1,
+  original: undefined,
+  context: {
+    body: '<html>\r\n' +
+      '<head><title>413 Request Entity Too Large</title></head>\r\n' +
+      '<body>\r\n' +
+      '<center><h1>413 Request Entity Too Large</h1></center>\r\n' +
+      '</body>\r\n' +
+      '</html>\r\n',
+    response: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 413,
+      statusMessage: 'Request Entity Too Large',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 4,
+      request: [Request],
+      toJSON: [Function: responseToJSON],
+      caseless: [Caseless],
+      body: '<html>\r\n' +
+        '<head><title>413 Request Entity Too Large</title></head>\r\n' +
+        '<body>\r\n' +
+        '<center><h1>413 Request Entity Too Large</h1></center>\r\n' +
+        '</body>\r\n' +
+        '</html>\r\n',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 12,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null
+    }
+  },
+  errorId: undefined,
+  arg: undefined,
+  skipHelp: false,
+  filePath: 'C:\\Users\\HP\\AppData\\Roaming\\npm\\node_modules\\zcatalyst-cli\\lib\\docs\\errorResponse'
+}
